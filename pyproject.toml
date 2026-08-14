@@ -1,0 +1,10 @@
+[project]
+name = "docs-to-text"
+version = "0.1.0"
+description = "A local desktop app for converting documents into text formats"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "customtkinter>=6.0.0",
+    "docling>=2.119.0",
+]
