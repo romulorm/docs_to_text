@@ -35,6 +35,19 @@ Supported inputs: PDF, PPTX, JPEG, PNG, TIFF, WEBP, BMP, MP3, and WAV.
 The Docling audio pipeline may download its speech-recognition assets the first
 time an audio file is converted.
 
+## To use mp3 or wav conversion
+To use mp3 or wav conversion you need FFmpeg installed
+
+### Windows
+```powershell
+winget install Gyan.FFmpeg
+```
+### Linux
+```bash
+sudo apt install ffmpeg
+```
+
+
 
 # Docs to Text - Português (Brasil)
 
@@ -74,3 +87,15 @@ Entradas compatíveis: PDF, PPTX, JPEG, PNG, TIFF, WEBP, BMP, MP3 e WAV.
 
 O pipeline de áudio do Docling pode baixar os recursos de reconhecimento de fala
 na primeira vez que um arquivo de áudio for convertido.
+
+## Conversão de áudio para texto (mp3 ou wav)
+Para converter áudio para texto (mp3 ou wav), instale o FFmpeg
+
+### Windows
+```powershell
+winget install Gyan.FFmpeg
+```
+### Linux
+```bash
+sudo apt install ffmpeg
+```

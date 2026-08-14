@@ -3,9 +3,23 @@
 from __future__ import annotations
 
 import json
+import logging
+import os
 import threading
+import warnings
 from pathlib import Path
 from typing import Callable
+
+os.environ.setdefault("TORCH_COMPILE_DISABLE", "1")
+
+
+class _DeprecationFilter(logging.Filter):
+    def filter(self, record: logging.LogRecord) -> bool:
+        return "torch_dtype" not in record.getMessage()
+
+
+logging.getLogger("transformers").addFilter(_DeprecationFilter())
+warnings.filterwarnings("ignore", message=".*torch_dtype.*")
 
 import customtkinter as ctk
 from tkinter import filedialog, messagebox
@@ -113,8 +127,7 @@ class DocsToTextApp(ctk.CTk):
         self._active_language = self.language_var.get()
         self._sync_display_values()
 
-        ctk.set_appearance_mode("system")
-        ctk.set_default_color_theme(self.theme_var.get())
+        self._apply_theme(self.theme_var.get())
         self._build_ui()
 
     def _build_ui(self) -> None:
@@ -521,6 +534,11 @@ class DocsToTextApp(ctk.CTk):
             command=command,
         ).pack(fill="x")
 
+    def _apply_theme(self, theme: str) -> None:
+        appearance = "dark" if theme.startswith("dark") else "light"
+        ctk.set_appearance_mode(appearance)
+        ctk.set_default_color_theme(theme)
+
     def _change_theme(self, theme: str) -> None:
         if theme not in THEMES or theme == getattr(
             self,
@@ -529,7 +547,7 @@ class DocsToTextApp(ctk.CTk):
         ):
             return
         self._active_theme = theme
-        ctk.set_default_color_theme(theme)
+        self._apply_theme(theme)
         self._build_ui()
 
     def _change_language(self, language: str) -> None:
