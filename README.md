@@ -18,6 +18,8 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 Reference: https://docs.astral.sh/uv/getting-started/installation/
 
 ## Run app
+[Download code](https://github.com/romulorm/docs_to_text/archive/refs/heads/main.zip)
+Extract .zip file, enter project folder and run:
 
 ```bash
 uv run python main.py
@@ -70,7 +72,8 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 Referência: https://docs.astral.sh/uv/getting-started/installation/
 
 ## Executar o app
-
+[Download do código](https://github.com/romulorm/docs_to_text/archive/refs/heads/main.zip)
+Descompacte o arquivo .zip, acesse a pasta do projeto e execute:
 ```bash
 uv run python main.py
 ```
