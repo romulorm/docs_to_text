@@ -10,7 +10,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "workflow_kicker": "UM FLUXO LOCAL E SIMPLES",
         "workflow_title": "Da fonte\npara texto útil.",
         "workflow_description": (
-            "O Docling faz o trabalho pesado enquanto este espaço "
+            "O Conversor faz o trabalho pesado enquanto este espaço "
             "mantém o processo claro."
         ),
         "step_source": "Escolha uma fonte",
@@ -20,7 +20,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "step_convert": "Converta localmente",
         "step_convert_description": "Seus arquivos ficam neste dispositivo",
         "supported": (
-            "FORMATOS\nPDF  /  PPTX  /  JPG  /  PNG\n"
+            "FORMATOS SUPORTADOS:\nPDF  /  PPTX  /  JPG  /  PNG\n"
             "TIFF  /  WEBP  /  BMP\nMP3  /  WAV"
         ),
         "setup_kicker": "CONFIGURAÇÃO DA CONVERSÃO",
@@ -93,7 +93,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "step_convert": "Convert locally",
         "step_convert_description": "Your files stay on this device",
         "supported": (
-            "SUPPORTED\nPDF  /  PPTX  /  JPG  /  PNG\n"
+            "SUPPORTED FORMATS:\nPDF  /  PPTX  /  JPG  /  PNG\n"
             "TIFF  /  WEBP  /  BMP\nMP3  /  WAV"
         ),
         "setup_kicker": "CONVERSION SETUP",

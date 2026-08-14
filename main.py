@@ -312,13 +312,26 @@ class DocsToTextApp(ctk.CTk):
                 wraplength=160,
             ).pack(fill="x", pady=(2, 0))
 
-        ctk.CTkLabel(
+        supported_card = ctk.CTkFrame(
             sidebar,
+            fg_color=self.COLORS["panel"],
+            corner_radius=12,
+        )
+        supported_card.pack(
+            side="bottom",
+            fill="x",
+            padx=18,
+            pady=(18, 24),
+        )
+        ctk.CTkLabel(
+            supported_card,
             text=self._t("supported"),
-            font=ctk.CTkFont(size=10, weight="bold"),
-            text_color=self.COLORS["muted"],
+            font=ctk.CTkFont(size=12, weight="bold"),
+            text_color=self.COLORS["text"],
+            anchor="w",
             justify="left",
-        ).pack(side="bottom", anchor="w", padx=24, pady=26)
+            wraplength=220,
+        ).pack(fill="x", padx=16, pady=(14, 16))
 
     def _build_converter_card(self) -> None:
         card = ctk.CTkFrame(
