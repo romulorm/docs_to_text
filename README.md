@@ -4,13 +4,13 @@ Docs to Text is a small desktop converter built with Python 3.13, CustomTkinter,
 and Docling. It converts supported documents, images, and audio files into
 JSON, plain text, Markdown, or HTML without uploading them anywhere.
 
-## Install UV
+## Install UV (Python package manager)
 
-macOS and Linux
+### macOS and Linux
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
-
+### Windows
 ```Powershell
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
@@ -43,13 +43,13 @@ CustomTkinter e Docling. Ele converte documentos, imagens e arquivos de áudio
 compatíveis para JSON, texto simples, Markdown ou HTML sem enviar arquivos para
 nenhum serviço externo.
 
-## Instalar o UV
+## Instalar o UV (Python package manager)
 
-macOS e Linux
+### macOS e Linux
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
-
+### Windows
 ```powershell
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
